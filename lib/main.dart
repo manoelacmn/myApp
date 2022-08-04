@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import './question.dart';
+
 void main() {
   runApp(myapp());
 }
@@ -19,7 +21,6 @@ class MyAppState extends State<myapp> {
     setState(() {
       questionIndex++;
     });
-    print(questionIndex);
   }
 
   @override
@@ -38,6 +39,7 @@ class MyAppState extends State<myapp> {
         body: Column(
           children: <Widget>[
             Text(questionIndex.toString()),
+            Text(questions[questionIndex]),
             ElevatedButton(
                 onPressed: (() => print("uwu")), child: Text('stolas ')),
             ElevatedButton(onPressed: answerquestion, child: Text("answer 2")),
